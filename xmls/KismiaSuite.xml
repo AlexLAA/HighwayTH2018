@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Kismia" parallel="false">
+	<test name="Login">
+		<classes>
+			<class name="lesson7.part2.KismiaLogin">
+			</class>
+		</classes>
+	</test>
+	<test name="ChangeGender">
+		<classes>
+			<class name="lesson7.part2.KismiaChangeGender">
+			</class>
+		</classes>
+	</test>
+</suite>
