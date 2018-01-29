@@ -5,5 +5,22 @@ package lesson8;
  */
 public class Box {
 
-    public static String type;
+    public Box(){
+
+    }
+
+    public double width;
+    public double height;
+    public double depth;
+
+
+    public String getVolume() {
+        return "Объём коробки: " + (width * height * depth);
+    }
+
+    public void printInfo(){
+        System.out.println(getVolume());
+    }
+
+
 }
