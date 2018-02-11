@@ -5,6 +5,14 @@ package lesson8;
  */
 public class User {
 
+    public User(){
+
+    }
+
+    public User(String name){
+
+    }
+
     public static String profession = "Police";
     public String name;
     public int age;

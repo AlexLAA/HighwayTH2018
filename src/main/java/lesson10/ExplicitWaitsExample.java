@@ -33,16 +33,20 @@ public class ExplicitWaitsExample {
     @Test
     public void waitKismia(){
         driver.get("https://kismia.com");
-        WebDriverWait wait = new WebDriverWait(driver, 5);
-        wait.until(ExpectedConditions.urlContains("kismia"));
-        wait.until(urlContainsKis());
-        wait.until(urlContainsKismia);
+        waitKismia1();
     }
 
     @AfterTest
     public void tearDown(){
         driver.quit();
     }
+
+
+    public void waitKismia1(){
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(urlContainsKis());
+    }
+
 
     public ExpectedCondition<Boolean> urlContainsKis(){
         return new ExpectedCondition<Boolean>() {

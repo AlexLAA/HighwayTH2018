@@ -1,6 +1,7 @@
 package lesson10;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -32,15 +33,21 @@ public class SwitchToWindowExample {
     public void switchToWindow() throws IOException, InterruptedException {
         driver.get("https://google.com");
         ((JavascriptExecutor) driver).executeScript( "window.open('')"); // Открыть новое окно
+
         String firstWindow = driver.getWindowHandle();
+
         Set<String> windowHandles = driver.getWindowHandles();
+
         for(String windowName : windowHandles){
             if(!windowName.equals(firstWindow)){
                 driver.switchTo().window(windowName);
             }
         }
+
         driver.get("https://facebook.com");
-        driver.switchTo().window(firstWindow);
+        driver.close();
+       // driver.switchTo().window(firstWindow);
+        Thread.sleep(10000);
 
 
 
@@ -58,6 +65,18 @@ public class SwitchToWindowExample {
         driver.switchTo().window(mainWindow);
         driver.get("https://facebook.com");
         Thread.sleep(10000);
+    }
+
+    public void waitFor2Windows() throws InterruptedException {
+        int time = 0;
+        while (driver.getWindowHandles().size() < 2){
+            Thread.sleep(500);
+            time += 500;
+            if(time >= 5000){
+                throw new TimeoutException("");
+            }
+        }
+
     }
 
 

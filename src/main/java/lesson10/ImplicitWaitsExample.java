@@ -21,14 +21,14 @@ public class ImplicitWaitsExample {
     @BeforeTest
     public void setUp(){
         driver = new ChromeDriver();
-       // driver.manage().timeouts().pageLoadTimeout(1, TimeUnit.SECONDS);
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(1, TimeUnit.SECONDS);
+       // driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
 
     @Test
     public void azaza() throws InterruptedException {
-       driver.get("https://google.com");
+       driver.get("https://kismia.com");
        driver.findElement(By.cssSelector("#NoElementHere")).click();
     }
 

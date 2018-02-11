@@ -22,7 +22,7 @@ public class JavascriptExecutorExample {
     @BeforeTest
     public void setUp(){
         driver = new ChromeDriver();
-       // driver.manage().timeouts().setScriptTimeout(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().setScriptTimeout(10, TimeUnit.SECONDS);
     }
 
 
@@ -56,7 +56,7 @@ public class JavascriptExecutorExample {
     @Test
     public void jsAsyncExample() throws InterruptedException {
         driver.get("https://google.com");
-        ((JavascriptExecutor)driver).executeAsyncScript("setTimeout(function(){ alert(\"Hello\"); }, 3000);");
+        ((JavascriptExecutor)driver).executeAsyncScript("setTimeout(function(){ alert(\"Hello\"); }, 60000);");
         driver.switchTo().alert().accept();
     }
 
