@@ -19,8 +19,6 @@ public class BrowserFactory {
     @BeforeSuite
     public void setUp() {
         driver = new ChromeDriver();
-        driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
 
