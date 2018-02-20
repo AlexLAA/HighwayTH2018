@@ -12,13 +12,14 @@ import java.io.IOException;
  */
 public class TrelloApi {
     public static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
-
-    OkHttpClient client = new OkHttpClient();
     Gson gson = new Gson();
 
 
-    public void getBoards() throws IOException {
-        Request request = new Request.Builder().url("https://api.trello.com/1/boards/JKegetyW/lists?cards=all&key="+TrelloLoginPass.key+"&token="+TrelloLoginPass.token).build();
+
+    OkHttpClient client = new OkHttpClient();
+
+    public void getBoardLists(String boardId) throws IOException {
+        Request request = new Request.Builder().url("https://api.trello.com/1/boards/"+boardId+"/lists?cards=all&key="+TrelloLoginPass.key+"&token="+TrelloLoginPass.token).build();
         String string = client.newCall(request).execute().body().string();
         System.out.println(string);
     }
@@ -47,7 +48,7 @@ public class TrelloApi {
 
     @Test
     public void testApi() throws IOException {
-        getBoards();
+        getBoardLists("JKegetyW");
         /*Card card = new Card();
         card.name = "Created via API 2";
         card.desc = "TEST DESC";

@@ -21,7 +21,6 @@ public class TestSerialization {
         SerializationWorker.serializeStorage(myStorage, "storage");
 
 
-
        /* Movie movie = new Movie();
         movie.title = "JACK";
         movie.rating = 9.0;
@@ -29,15 +28,13 @@ public class TestSerialization {
         list.add(movie);
         SerializationWorker.serializeStorage(list, "movies");*/
 
-
-
     }
 
 
     @Test
     public void deserializeTest(){
         MyStorage myStorage = (MyStorage) SerializationWorker.deserialzeStorage("storage");
-        System.out.println(myStorage);
+        System.out.println(myStorage.name);
         /*List<Movie> list = (List<Movie>) SerializationWorker.deserialzeStorage("movies");
         System.out.println(list);*/
     }
