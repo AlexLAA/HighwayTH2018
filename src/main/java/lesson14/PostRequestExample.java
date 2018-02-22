@@ -48,6 +48,8 @@ public class PostRequestExample {
 
         }
 
+        System.out.println(DefaultCookieStorage.cookies);
+
     }
 
     public static List<org.openqa.selenium.Cookie> getLoginCookies() throws IOException {

@@ -20,7 +20,7 @@ public class KismiaLoginWithCookies extends BrowserFactory{
         for(Cookie cookie : loginCookies){
             driver.manage().addCookie(cookie);
         }
-        driver.get("https://kismia.com");
+        driver.get("https://kismia.com/profile");
         Thread.sleep(20000);
     }
 }
