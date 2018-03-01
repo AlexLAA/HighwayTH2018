@@ -6,6 +6,6 @@ package trello.masterGitCheck;
 public class MyAwsomeTest {
 
     public static void main(String[] args) {
-        
+
     }
 }
