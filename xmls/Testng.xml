@@ -3,9 +3,7 @@
 <suite name="TestSuite" parallel="false">
 	<test name="TestName">
 		<classes>
-			<class name="lesson7.AssertsExample">
-			</class>
-			<class name="lesson7.BeforeAfterExamples">
+			<class name="allureExample.TestAllure">
 			</class>
 		</classes>
 	</test>
