@@ -15,6 +15,8 @@ public class MethodsExample {
 
     }
 
+    // some azaza
+
 
     public static int getSquare() {
         return 3 * 5;

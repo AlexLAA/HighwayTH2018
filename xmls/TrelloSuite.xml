@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Trello" parallel="false">
+	<test name="API: Create Card">
+		<parameter name="name" value="MyAwsomeCard"></parameter>
+		<classes>
+			<class name="trello.api.CreateCard">
+			</class>
+		</classes>
+	</test>
+	<test name="Criticals: Login">
+		<parameter name="email" value="iLoveJustin@biber.com"></parameter>
+		<parameter name="password" value="lovelovelove"></parameter>
+		<classes>
+			<class name="trello.criticals.Login">
+			</class>
+		</classes>
+	</test>
+	<test name="Criticals: CardActions">
+		<classes>
+			<class name="trello.criticals.CardActions">
+			</class>
+		</classes>
+	</test>
+	<test name="Criticals: BoardActions">
+		<classes>
+			<class name="trello.criticals.BoardActions">
+			</class>
+		</classes>
+	</test>
+</suite>
+
