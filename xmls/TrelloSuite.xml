@@ -8,25 +8,5 @@
 			</class>
 		</classes>
 	</test>
-	<test name="Criticals: Login">
-		<parameter name="email" value="iLoveJustin@biber.com"></parameter>
-		<parameter name="password" value="lovelovelove"></parameter>
-		<classes>
-			<class name="trello.criticals.Login">
-			</class>
-		</classes>
-	</test>
-	<test name="Criticals: CardActions">
-		<classes>
-			<class name="trello.criticals.CardActions">
-			</class>
-		</classes>
-	</test>
-	<test name="Criticals: BoardActions">
-		<classes>
-			<class name="trello.criticals.BoardActions">
-			</class>
-		</classes>
-	</test>
 </suite>
 

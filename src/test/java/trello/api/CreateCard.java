@@ -20,4 +20,9 @@ public class CreateCard {
     public void createNewCard(){
 
     }
+
+
+    public void azasd(){
+        
+    }
 }
