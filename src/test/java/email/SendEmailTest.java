@@ -13,16 +13,16 @@ public class SendEmailTest {
 
     @Test
     public void azzaza() throws EmailException {
-        Email email = new SimpleEmail();
-        email.setHostName("smtp.googlemail.com");
-        email.setSmtpPort(465);
-        email.setAuthenticator(new DefaultAuthenticator("loliktest1@mail.com", "biberNotFunny"));
-        email.setSSLOnConnect(true);
-        email.setFrom("user@gmail.com");
-        email.setSubject("TestMail");
-        email.setMsg("This is a test mail ... :-)");
-        email.addTo("send@to.com");
-        email.send();
+        Email email = new SimpleEmail(); // Create Object
+        email.setHostName("smtp.googlemail.com"); // Set SMTP hostname
+        email.setSmtpPort(465); // Set port
+        email.setAuthenticator(new DefaultAuthenticator("loliktest1@mail.com", "biberNotFunny")); // Set email/password
+        email.setSSLOnConnect(true); // SSL true
+        email.setFrom("user@gmail.com"); // set FROM
+        email.setSubject("TestMail"); // set Subject
+        email.setMsg("This is a test mail ... :-)"); // Set message
+        email.addTo("send@to.com"); // Set recipients
+        email.send(); // Send Email
 
     }
 }
