@@ -15,6 +15,7 @@ public class Movie implements Serializable{
     public int year;
     public String director;
     public List<String> actors = new ArrayList<>();
+    private String myPrivateString = "VeryPrivateField";
 
     @Override
     public String toString() {

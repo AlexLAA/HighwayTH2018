@@ -16,7 +16,7 @@ public class TestEmail {
 
     @Test
     public void azaza() throws InterruptedException, MessagingException, IOException {
-        ImapClient client = new ImapClient("my@email.com", "password");
+        ImapClient client = new ImapClient("trello@onthe.io", "qwe1rty2");
         client.connect();
         List<Message> messages = client.findMessages(With.from("team@intercom.io"), 2, 10);
         for(Message message : messages){

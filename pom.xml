@@ -13,6 +13,7 @@
         <suite>testng.xml</suite>
         <buildDirectory>${project.basedir}/target</buildDirectory>
         <allure.results.directory>${buildDirectory}/allure-results</allure.results.directory>
+        <resultsPatternAllure>**/allure-results</resultsPatternAllure>
     </properties>
 
     <build>
@@ -139,6 +140,8 @@
         </dependency>
 
     </dependencies>
+
+
 
 
 </project>
